@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+#background {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 888;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  background: none;
+  top: 0;
+  padding: 50px 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#hamburger {
+  margin-left: 2em;
+  height: 14px;
+  cursor: pointer;
+}
+
+#close {
+  display: none;
+  margin-left: 2em;
+  cursor: pointer;
+}
+
+#ul {
+  list-style: none;
+  display: none;
+  margin-right: 1.5em;
+}
+
+#ul a {
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  margin-left: 2em;
+  cursor: pointer;
+}
+
+#logo {
+  height: 14px;
+  margin-right: 31px;
+}
+
+.hero-image {
+  width: 100%;
+  position: relative;
+}
+
+.mobile {
+  width: 100%;
+  display: block;
+}
+
+#hero-image-2,
+#hero-image-3 {
+  display: none;
+}
+
+.desktop {
+  display: none;
+}
+
+.hero-content {
+  padding: 3.6em 2em;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+  word-spacing: -0.1rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-content > p {
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(0, 0%, 63%);
+  word-spacing: -0.1rem;
+  letter-spacing: -0.005rem;
+  line-height: 1.3em;
+}
+
+.hero-btn {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+#hero-btn-left,
+#hero-btn-right {
+  padding: 1em 1.5em;
+}
+#hero-btn-left > img,
+#hero-btn-right > img {
+  width: 10.5px;
+  height: 18px;
+}
+
+#hero-btn-left:hover,
+#hero-btn-right:hover {
+  background-color: hsl(0, 0%, 27%);
+}
+
+.shopnow {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.shopnow > h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.75em;
+  margin-right: 1em;
+  align-content: center;
+}
+
+section img {
+  width: 100%;
+  display: block;
+}
+
+.about {
+  padding: 3.5em 2em;
+}
+
+.about h2 {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.4em;
+  margin-bottom: 1.5em;
+}
+
+.about p {
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(0, 0%, 63%);
+  word-spacing: -0.1rem;
+  letter-spacing: -0.005rem;
+  line-height: 1.3em;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 60%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    width: 100%;
+    display: block;
+  }
+  #hamburger {
+    display: none;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 60% auto;
+  }
+  .hero-content {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero-content > h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content > p {
+    word-spacing: 0.1rem;
+    letter-spacing: 0.005rem;
+  }
+  .about p {
+    word-spacing: 0.1rem;
+    letter-spacing: 0.005rem;
+  }
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  #logo {
+    margin-left: 5.5em;
+  }
+
+  #ul {
+    display: flex;
+  }
+
+  #ul a {
+    color: white;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+}
+@media screen and (min-width: 769px) {
+  #hamburger {
+    display: none;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-rows: min-content;
+  }
+
+  .hero-content {
+    padding: 2em;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  #logo {
+    margin-left: 3em;
+  }
+
+  #ul {
+    display: flex;
+  }
+
+  #ul a {
+    color: white;
+  }
+
+  #ul a:hover {
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .hero-btn {
+    right: -117px;
+  }
+}
